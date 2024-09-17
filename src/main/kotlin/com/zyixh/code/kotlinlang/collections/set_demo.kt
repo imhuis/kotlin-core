@@ -6,10 +6,20 @@ package com.zyixh.code.kotlinlang.collections
  * @description:
  */
 
-val openIssues: MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescr2", "uniqueDescr3")
 
-fun addIssue(uniqueDesc: String): Boolean {
-    return openIssues.add(uniqueDesc)
+val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry")
+// Mutable set with explicit type declaration
+val fruit: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry")
+val fruitLocked: Set<String> = fruit
+
+// sets are unordered, you can't access an item at a particular index.
+
+fun addToSet(str: String): Boolean {
+    return fruit.add(str)
+}
+
+fun removeToSet(str: String): Boolean {
+    return fruit.remove(str)
 }
 
 fun getStatusLog(isAdded: Boolean): String {
@@ -17,9 +27,14 @@ fun getStatusLog(isAdded: Boolean): String {
 }
 
 fun main() {
-    val aNewIssue: String = "uniqueDescr4"
-    val anIssueAlreadyIn: String = "uniqueDescr2"
+    println(readOnlyFruit)
 
-    println("Issue $aNewIssue ${getStatusLog(addIssue(aNewIssue))}")
-    println("Issue $anIssueAlreadyIn ${getStatusLog(addIssue(anIssueAlreadyIn))}")
+    println("This set has ${readOnlyFruit.count()} items")
+    println("Banana".lowercase() in readOnlyFruit)
+
+    val aNewIssue: String = "Guava"
+    val anIssueAlreadyIn: String = "banana"
+
+    println("Issue $aNewIssue ${getStatusLog(addToSet(aNewIssue))}")
+    println("Issue $anIssueAlreadyIn ${getStatusLog(addToSet(anIssueAlreadyIn))}")
 }

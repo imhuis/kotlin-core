@@ -20,18 +20,17 @@ fun main() {
     }
 
     println("while loop ======")
-
     var cakesEaten = 0
     var cakesBaked = 0
 
-    while (cakesEaten < 5) {                    // 1
+    while (cakesEaten < 5) {
         eatACake()
         cakesEaten++
     }
 
 
     println("do-while loop ======")
-    do {                                        // 2
+    do {
         bakeACake()
         cakesBaked++
     } while (cakesBaked < cakesEaten)

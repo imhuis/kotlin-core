@@ -1,4 +1,4 @@
-package com.zyixh.code.kotlinlang.functional
+package com.zyixh.code.kotlinlang.functions
 
 /**
  * @author: imhuis
