@@ -10,13 +10,18 @@ fun main() {
     // able, a compilation error is produced.
     var nullable: String? = "You can keep a null here"
     nullable = null
-//    strLength(nullable)
+
     val result = describeString(nullable)
     print("result: $result")
 }
 
-fun strLength(notNull: String): Int {
-    return notNull.length
+fun strLength(notNull: String?): Int {
+    // elvis operator
+    return notNull?.length ?: 0
+}
+
+fun strLengthOrNone(notNull: String?): Int? {
+    return notNull?.length
 }
 
 fun describeString(maybeString: String?): String {
