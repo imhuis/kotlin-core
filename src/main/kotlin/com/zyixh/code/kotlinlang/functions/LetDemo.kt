@@ -1,4 +1,4 @@
-package com.imhui.code.kotlinlang.scope
+package com.zyixh.code.kotlinlang.functions
 
 /**
  * @author: imhuis
