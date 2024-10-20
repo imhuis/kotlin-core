@@ -13,6 +13,8 @@ repositories {
 }
 
 dependencies {
+    implementation("jakarta.annotation:jakarta.annotation-api:2.1.1")
+    implementation("jakarta.inject:jakarta.inject-api:2.0.1")
     testImplementation(kotlin("test"))
 }
 
